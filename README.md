@@ -1,16 +1,90 @@
-# flutter_zadaniye
+# Todo List — Портфолио Игоря Силина
 
-A new Flutter project.
+Flutter-приложение с Todo-листом и карточками профиля. Демонстрация ООП-архитектуры и Material Design 3.
 
-## Getting Started
+## 📱 Скриншоты
 
-This project is a starting point for a Flutter application.
+- **Вкладка «Задачи»** — создание, выполнение и удаление задач с приоритетами
+- **Вкладка «Профиль»** — карточки портфолио с информацией о разработчике
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Запуск проекта
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Требования
+- Flutter SDK 3.0+
+- Chrome / Edge / Windows (desktop)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Установка и запуск
+```bash
+# Клонировать репозиторий
+git clone https://github.com/yourusername/flutter-todo-portfolio.git
+cd flutter-todo-portfolio
+
+# Установить зависимости
+flutter pub get
+
+# Запустить в браузере (рекомендуется)
+flutter run -d chrome
+
+# Или запустить как десктопное приложение
+flutter run -d windows
+```
+
+### Горячие клавиши при запуске
+- `r` — Hot Reload (перезагрузить с сохранением состояния)
+- `R` — Hot Restart (полная перезагрузка)
+- `q` — выйти из приложения
+
+## 📁 Структура проекта
+
+```
+lib/
+├── main.dart                     # Точка входа, BottomNavigationBar
+├── models/
+│   └── todo_model.dart           # Модель задачи (id, title, text, priority)
+├── repositories/
+│   └── todo_repository.dart      # Singleton-репозиторий управления задачами
+├── screens/
+│   ├── home_screen.dart          # Главный экран — список задач
+│   ├── create_todo_screen.dart   # Экран создания задачи
+│   └── profile_screen.dart       # Экран профиля с карточками
+└── widgets/
+    ├── todo_card.dart            # Карточка задачи (чекбокс, свайп, приоритет)
+    └── profile_card.dart         # Карточка профиля
+```
+
+## ✨ Функционал
+
+### Todo List
+- ✅ Создание задач с заголовком, описанием и приоритетом
+- ✅ Отметка выполнения с анимацией
+- ✅ Свайп для удаления
+- ✅ Прогресс-бар выполнения
+- ✅ Приоритеты (низкий, средний, высокий)
+
+### Профиль
+- ✅ Карточки с информацией о разработчике
+- ✅ Красивый UI с тенями и градиентами
+- ✅ Фиолетовая тема Material Design 3
+
+## 🛠️ Технологии
+
+- **Flutter** — кроссплатформенный UI фреймворк
+- **Dart** — язык программирования
+- **Material Design 3** — система дизайна
+- **ООП** — объектно-ориентированная архитектура
+
+## 🧪 Тесты
+
+```bash
+# Запуск тестов
+flutter test
+```
+
+## 📄 Лицензия
+
+MIT License — свободно использовать в учебных и коммерческих целях.
+
+---
+
+**Автор:** Игорь Силин  
+**GitHub:** https://github.com/yourusername
